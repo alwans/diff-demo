@@ -1,0 +1,10 @@
+package com.test.codediff;
+
+public class Test1 {
+
+    
+    public void print(String msg){
+        System.out.println(msg);
+
+    }
+}
