@@ -20,4 +20,26 @@ public class DiffController {
         System.out.println("dev");
         return AjaxResult.success("Hello,"+name);
     }
+
+    @GetMapping("test2")
+    public AjaxResult test2(@RequestParam(required = false) int id){
+        D();
+        return AjaxResult.success(id);
+    }
+
+    public void A(){
+        System.out.println("run A");
+        B();
+        D();
+    }
+    public void B(){
+        System.out.println("run B");
+        C();
+    }
+    public void C(){
+        System.out.println("run C");
+    }
+    public void D(){
+        System.out.println("run D");
+    }
 }
