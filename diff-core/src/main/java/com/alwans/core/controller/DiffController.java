@@ -18,6 +18,7 @@ public class DiffController {
     @GetMapping("test1")
     public AjaxResult test1(@RequestParam(required = false) String name){
         System.out.println("dev");
+        A();
         return AjaxResult.success("Hello,"+name);
     }
 
@@ -40,6 +41,7 @@ public class DiffController {
         System.out.println("run C");
     }
     public void D(){
+        System.out.println("dev: modify D method");
         System.out.println("run D");
     }
 }
