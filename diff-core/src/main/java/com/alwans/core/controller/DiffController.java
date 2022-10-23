@@ -17,6 +17,29 @@ public class DiffController {
 
     @GetMapping("test1")
     public AjaxResult test1(@RequestParam(required = false) String name){
+        A();
         return AjaxResult.success("Hello,"+name);
+    }
+
+    @GetMapping("test2")
+    public AjaxResult test2(@RequestParam(required = false) int id){
+        D();
+        return AjaxResult.success(id);
+    }
+
+    public void A(){
+        System.out.println("run A");
+        B();
+        D();
+    }
+    public void B(){
+        System.out.println("run B");
+        C();
+    }
+    public void C(){
+        System.out.println("run C");
+    }
+    public void D(){
+        System.out.println("run D");
     }
 }
